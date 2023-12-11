@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscar Vuelos</title>
+</head>
+<body>
+    <div >
+        <form method="post" action="buscarVuelos.php">
+            <label for="">Seleccione su Destino:</label>
+                <select name="destino">
+                    <option>Santa_Cruz</option>
+                    <option>Cochabamba</option>
+                    <option>Tarija</option>
+                    <option>Pando</option>
+                    <option>Sucre</option>
+                    <option>Potosi</option>
+                    <option>Oruro</option>
+                    <option>Beni</option>
+                </select><br><br>
+            <label for="">Seleccione su fecha de Salida: </label>
+            <input type="date" name="salida" min="2022-06-18"></td><br><br>
+            <label for="">Seleccione su fecha de Regreso: </label>
+            <input type="date" name="regreso" min="2022-06-18"></td><br><br>
+            <button type="submit">Buscar</button>
+        </form>
+    </div>
+</body>
+<style>
+    body{
+        background-color: #4d4d5c;
+    }
+    div{
+        background-color: #6cc091;
+        width: 550px;
+        height: 250px;
+        border: 2px black solid;
+        text-align: center;
+        padding: 20px;
+        font-size: 25px;
+        border-radius: 40px;
+        margin: 0 auto;
+    }
+</style>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="estilos/equipaje.css">
+    <title>Equipaje</title>
+</head>
+<body>
+    <div id="cuerpo">
+        <div id="cabecera">
+            <div>
+                <img src="imagen/mano.png" alt="">
+                <button  onclick="ejecutarAJAX()">Equipaje de mano</button>
+            </div>
+            <div>
+                <img src="imagen/bodega.png" alt="">
+                <button  onclick="ejecutarAJAX1()">Equipaje de bodega</button>
+            </div>
+            <div>
+                <img src="imagen/especial.png" alt="">
+                <button  onclick="ejecutarAJAX2()">Equipaje especial</button>
+            </div>
+            <div>
+                <img src="imagen/restringidos.png" alt="">
+                <button  onclick="ejecutarAJAX3()">Articulos restringidos</button>
+            </div>
+        </div>
+        <div id="contenido">
+
+        </div>
+    </div>
+    <script type="text/javascript">
+        function ejecutarAJAX()
+        {
+
+            var ajaxRequest = new XMLHttpRequest();
+
+            ajaxRequest.onreadystatechange = function()
+            {
+                if (ajaxRequest.readyState == 4 && ajaxRequest.status == 200) 
+                {
+                   document.getElementById("contenido").innerHTML = ajaxRequest.responseText;    
+                }
+            }
+            ajaxRequest.open("Get","texto/mano.txt",true);
+
+            ajaxRequest.send();
+        }
+        function ejecutarAJAX1()
+        {
+
+            var ajaxRequest = new XMLHttpRequest();
+
+            ajaxRequest.onreadystatechange = function()
+            {
+                if (ajaxRequest.readyState == 4 && ajaxRequest.status == 200) 
+                {
+                   document.getElementById("contenido").innerHTML = ajaxRequest.responseText;    
+                }
+            }
+            ajaxRequest.open("Get","texto/bodega.txt",true);
+
+            ajaxRequest.send();
+        }
+        function ejecutarAJAX2()
+        {
+
+            var ajaxRequest = new XMLHttpRequest();
+
+            ajaxRequest.onreadystatechange = function()
+            {
+                if (ajaxRequest.readyState == 4 && ajaxRequest.status == 200) 
+                {
+                   document.getElementById("contenido").innerHTML = ajaxRequest.responseText;    
+                }
+            }
+            ajaxRequest.open("Get","texto/especial.txt",true);
+
+            ajaxRequest.send();
+        }
+        function ejecutarAJAX3()
+        {
+
+            var ajaxRequest = new XMLHttpRequest();
+
+            ajaxRequest.onreadystatechange = function()
+            {
+                if (ajaxRequest.readyState == 4 && ajaxRequest.status == 200) 
+                {
+                   document.getElementById("contenido").innerHTML = ajaxRequest.responseText;    
+                }
+            }
+            ajaxRequest.open("Get","texto/restringido.txt",true);
+
+            ajaxRequest.send();
+        }
+    </script>
+</body>
+</html>
